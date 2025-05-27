@@ -1,10 +1,14 @@
 body {
-  background-color: black;
+  background-color: #147088;
+  background-image: radial-gradient(#a1c5cf 0.75px, transparent 0.75px),
+    radial-gradient(#a1c5cf 0.75px, #147088 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
   font-family: "Playwrite DK Loopet", cursive;
 }
 
 .weather-app {
-  background-color: white;
+  background-color: #a1c5cf;
   max-width: 550px;
   margin: 40px auto;
   padding: 15px;
@@ -13,17 +17,19 @@ body {
 }
 
 header {
-  border-bottom: thick double black;
+  border-bottom: thick double white;
   padding: 0px 0px 15px 0px;
   text-align: center;
 }
 
 h1 {
+  color: white;
   font-size: 45px;
+  margin: 16px;
 }
 .search-form-input {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #147088;
   border: none;
   border-radius: 6px;
   width: 25%;
@@ -31,7 +37,7 @@ h1 {
 }
 
 .search-form-button {
-  background-color: black;
+  background-color: #147088;
   color: white;
   border: none;
   border-radius: 6px;
@@ -47,41 +53,49 @@ main {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
+  color: #147088;
 }
 
 .weather-app-city {
   margin: 0;
   font-size: 30px;
+  font-weight: 900;
+  text-align: center;
 }
 .weather-app-details {
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(20, 112, 136, 0.6);
+  text-align: center;
 }
 
 #humidity-percent,
 #wind-speed {
   font-weight: 900;
-  color: rgb(0, 0, 0);
+  color: #c8ebf5;
 }
 
 #weather-description {
 }
 
 #date {
-  margin-left: 10px;
+  text-align: center;
 }
 
 .weather-app-temperature-container {
   display: flex;
   font-size: 45px;
-  margin-right: 50px;
-  margin-top: 38px;
+  margin-top: 30px;
 }
 
 .weather-app-temperature-unit {
   font-size: 20px;
   margin-top: 11px;
-  margin-left: 10px;
+  margin-right: 59px;
+}
+
+.weather-app-temperature {
+  margin-left: -22px;
+  font-weight: 900;
 }
 
 .weather-app-temperature-icon {
@@ -91,7 +105,7 @@ main {
 }
 
 footer {
-  border-top: thick double black;
+  border-top: thick double white;
   padding: 20px 0px 0px 0px;
   font-size: 13px;
   text-align: center;

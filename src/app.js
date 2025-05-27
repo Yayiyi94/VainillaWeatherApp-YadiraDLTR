@@ -18,6 +18,9 @@ function refreshWeather(response) {
 
   let timeElement = document.querySelector("#date");
   timeElement.innerHTML = formatDate(date);
+
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.innerHTML = `<img src ="${response.data.condition.icon_url}" class= weather-app-temperature-icon/>`;
 }
 
 function formatDate(date) {

@@ -7,13 +7,54 @@ body {
   font-family: "Playwrite DK Loopet", cursive;
 }
 
+.theme-button {
+  margin: 0 auto;
+  background: #a1c5cf;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  font-size: 14px;
+  transition: all 150ms ease-in-out;
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  border: none;
+  background: #2d376f;
+  color: #030515;
+}
+
+.dark {
+  background-color: #171c37;
+  background-image: radial-gradient(#030515.75px, transparent 0.75px),
+    radial-gradient(#030515 0.75px, #171c37 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.dark .theme-button {
+  background: #030515;
+  color: #2d376f;
+}
+
+.dark .theme-button:hover {
+  background: #a1c5cf;
+  color: #147088;
+}
+
 .weather-app {
   background-color: #a1c5cf;
   max-width: 550px;
   margin: 40px auto;
   padding: 15px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.5);
   border-radius: 15px;
+}
+
+.dark .weather-app {
+  background-color: #2d376f;
+  box-shadow: 1px 1px 10px 5px rgba(71, 71, 71, 0.5);
 }
 
 header {
@@ -22,11 +63,20 @@ header {
   text-align: center;
 }
 
+.dark header {
+  border-bottom: thick double #56609b;
+}
+
 h1 {
   color: white;
   font-size: 45px;
   margin: 16px;
 }
+
+.dark h1 {
+  color: #56609b;
+}
+
 .search-form-input {
   background-color: white;
   color: #147088;
@@ -34,6 +84,11 @@ h1 {
   border-radius: 6px;
   width: 25%;
   padding: 8px;
+}
+
+.dark .search-form-input {
+  background-color: rgb(134, 134, 134);
+  color: #171c37;
 }
 
 .search-form-button {
@@ -46,6 +101,11 @@ h1 {
   padding: 8px;
 }
 
+.dark .search-form-button {
+  background-color: #171c37;
+  color: #56609b;
+}
+
 main {
   padding: 20px 0;
 }
@@ -54,6 +114,10 @@ main {
   display: flex;
   justify-content: space-between;
   color: #147088;
+}
+
+.dark .weather-app-data {
+  color: #56609b;
 }
 
 .weather-app-city {
@@ -68,10 +132,19 @@ main {
   text-align: center;
 }
 
+.dark .weather-app-details {
+  color: rgba(86, 96, 155, 0.6);
+}
+
 #humidity-percent,
 #wind-speed {
   font-weight: 900;
   color: #c8ebf5;
+}
+
+.dark #humidity-percent,
+.dark #wind-speed {
+  color: #7a88d7;
 }
 
 #weather-description {
@@ -110,6 +183,10 @@ footer {
   font-size: 13px;
   text-align: center;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.dark footer {
+  border-top: thick double #56609b;
 }
 
 a {

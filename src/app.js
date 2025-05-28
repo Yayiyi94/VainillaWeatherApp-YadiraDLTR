@@ -60,4 +60,13 @@ function handleSearch(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
+function changeTheme() {
+  let body = document.querySelector("body");
+
+  body.classList.toggle("dark");
+}
+
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click", changeTheme);
+
 searchCity("Mexico City");
